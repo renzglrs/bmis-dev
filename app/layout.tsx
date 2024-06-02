@@ -4,6 +4,8 @@ import "./globals.css";
 import {
   TooltipProvider,
 } from "@/components/ui/tooltip"
+import Navbar from "@/components/Navbar";
+import Sidebar from "@/components/Sidebar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +23,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <TooltipProvider>
-          {children}
+          <div className="flex min-h-screen w-full flex-col">
+            <Sidebar />
+            <Navbar />
+            {children}
+          </div>
         </TooltipProvider>
       </body>
     </html>
