@@ -4,7 +4,6 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import Image from 'next/image'
 import avatarImg from "../public/avatar2.png"
 import Link from 'next/link'
-import { Triangle } from 'lucide-react'
 
 const Navbar = () => {
   const pathname = usePathname()
@@ -18,7 +17,7 @@ const Navbar = () => {
 
   }
   return (
-    <nav className="flex items-center w-full h-full p-4 border-b">
+    <nav className="flex items-center w-full h-full py-4 px-10 border-b border-t">
 
 
       <div className="flex justify-between items-center h-full w-full ">
@@ -26,14 +25,20 @@ const Navbar = () => {
           {pageName()}
         </h1>
 
-        <div className='h-auto'>
-          <Image 
-            src={avatarImg}
-            width={34}
-            height={34}
-            className="bg-gray-500 object-contain rounded-full"
-            alt='avatar'
-          />
+        <div>
+          <Link href="/">
+            <Image 
+              src={avatarImg}
+              width={24}
+              height={24}
+              className="bg-gray-500 rounded-full"
+              alt='avatar'
+              style={{
+                width: '100%',
+                height: 'auto',
+              }}
+            />
+          </Link>
         </div>
       </div>
     </nav>

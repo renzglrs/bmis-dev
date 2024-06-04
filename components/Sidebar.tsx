@@ -58,7 +58,7 @@ export const links: Link[]= [
 
 const Sidebar = () => {
   return (
-    <aside className="flex w-fit h-screen flex-col justify-between border-r bg-background max-sm:hidden lg:w-[264px]">
+    <aside className="flex w-fit h-screen flex-col justify-between border-r border-t bg-background max-sm:hidden lg:w-[264px]">
         <nav className="flex flex-col items-center">
 
             <div className="flex items-center h-[60px] w-full p-4">

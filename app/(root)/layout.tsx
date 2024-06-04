@@ -30,7 +30,7 @@ export default function RootLayout({
 
                 <section className="flex flex-col w-full min-h-screen">
                   <Navbar />
-                  <div className="w-full min-h-screen p-6">
+                  <div className="w-full min-h-screen p-6 bg-gray-50">
                     {children}
                   </div>
                 </section>
