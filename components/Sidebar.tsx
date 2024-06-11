@@ -62,7 +62,7 @@ const Sidebar = () => {
         <nav className="flex flex-col items-center">
 
             <div className="flex items-center h-[60px] w-full p-4">
-                <Link href="#" className='flex gap-3 justify-start items-center'>
+                <Link href="/" className='flex gap-3 justify-start items-center'>
                     <Component size={20} strokeWidth={3} />
                     <span className="text-base font-semibold max-md:hidden">BMIS</span>
                 </Link>

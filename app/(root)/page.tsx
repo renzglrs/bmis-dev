@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -10,18 +11,18 @@ import {
 export default function App() {
   return (
     <section className=" w-full">
-      <div className="flex gap-2 ">
-        <Card className="w-full max-w-md">
+      <div className="flex flex-col lg:flex-row gap-2 ">
+        <Card className="w-full">
           <CardHeader>
-            <CardTitle>Create project 1</CardTitle>
+            <CardTitle>Create User</CardTitle>
             <CardDescription>Deploy your new project in one-click.</CardDescription>
           </CardHeader>
           <CardContent>
             Content
           </CardContent>
-          <CardFooter>
-            {/* <Button variant="outline">Cancel</Button>
-            <Button>Deploy</Button> */}
+          <CardFooter className="flex justify-end gap-2">
+            {/* <Button variant="outline">Cancel</Button> */}
+            <Button>Add User</Button>
           </CardFooter>
         </Card>
 
