@@ -70,7 +70,7 @@ const Sidebar = () => {
             
             <ul className="flex flex-col items-start border-t border-b w-full py-4 px-2 ">
                 {links.map((link) => (
-                    <li className='w-full'>
+                    <li className='w-full' key={link.label}>
                         <Link href={link.route} className="flex items-start justify-between py-3 px-2 text-sm rounded-md font-medium hover:bg-secondary">
                             <div className='flex gap-2 items-start '>
                                 {link.icon}
