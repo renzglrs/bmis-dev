@@ -6,9 +6,12 @@ import {
   CardFooter,
   CardHeader,
   CardTitle,
-} from "@/components/ui/card"
+} from "@/components/ui/card";
+import { getAllUsers } from "../lib/actions";
 
-export default function App() {
+export default async function App() {
+  const users = await getAllUsers();
+
   return (
     <section className=" w-full">
       <div className="flex flex-col lg:flex-row gap-2 ">
@@ -26,7 +29,6 @@ export default function App() {
           </CardFooter>
         </Card>
 
-
         <Card className="w-full">
           <CardHeader>
             <CardTitle>Card Title</CardTitle>
@@ -53,6 +55,14 @@ export default function App() {
           </CardFooter>
         </Card>
 
+      </div>
+
+      <div>
+        <ul>
+          {users.map((user) => (
+            <li>{user.name}</li>
+          ))}
+        </ul>
       </div>
 
 
